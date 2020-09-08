@@ -1,8 +1,7 @@
 import React from "react";
-import { Container, Row, Col, Nav, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Nav, Form } from "react-bootstrap";
 import data from "./data";
 import { useState } from "react";
-import { useEffect } from "react";
 
 const App = () => {
   const products = data;
@@ -10,7 +9,6 @@ const App = () => {
   const [filterData, setFilterData] = useState("shirt");
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("shirt");
-  const [seData, setSedata] = useState([]);
 
   const searchFilter = products.filter((pd) => pd.category === `${search}`);
   console.log(searchFilter);
@@ -38,9 +36,7 @@ const App = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link onClick={() => setFilterData("pantshirt")}>
-                Pant
-              </Nav.Link>
+              <Nav.Link onClick={() => setFilterData("pant")}>Pant</Nav.Link>
             </Nav.Item>
           </Nav>
           <Container className="py-5">
@@ -58,10 +54,10 @@ const App = () => {
           ))}
         </Col>
         <Col md={4}>
-          <Form onSubmit={getSearch}>
+          <p>Search Keywork : shirt/tshirt/pant</p>
+          <Form>
             <Form.Control type="text" value={search} onChange={updateSearch} />
             <br />
-            <Button>Search</Button>
           </Form>
           {searchFilter.map((pds) => (
             <li>{pds.name}</li>
