@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Nav, Form } from "react-bootstrap";
 import data from "./data";
 import { useState } from "react";
+import Shop from "./components/Shop";
 
 const App = () => {
   const products = data;
@@ -64,6 +65,10 @@ const App = () => {
           ))}
         </Col>
       </Row>
+      <hr />
+      <hr />
+      <h2>Select Size</h2>
+      <Shop></Shop>
     </Container>
   );
 };

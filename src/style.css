@@ -1,0 +1,7 @@
+.size-option p{
+    font-size: 15px;
+    cursor: pointer;
+    color: teal;
+    font-weight: bold;
+    /* width: 30px; */
+}
