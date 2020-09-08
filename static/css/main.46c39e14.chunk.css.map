@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,eACI,cAAe,CACf,cAAe,CACf,UAAW,CACX,eAEJ","file":"main.46c39e14.chunk.css","sourcesContent":[".size-option p{\n    font-size: 15px;\n    cursor: pointer;\n    color: teal;\n    font-weight: bold;\n    /* width: 30px; */\n}"]}
